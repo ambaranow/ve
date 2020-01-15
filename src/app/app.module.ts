@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { MatButtonModule, MatProgressBarModule, MatIconModule, MatCardModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UiTaskComponent } from './background-tasks/components/ui-task/ui-task.component';
+import { FileUploadModule } from './file-upload/file-upload.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FfmpegModule } from './ffmpeg/ffmpeg.module';
 
 @NgModule({
   declarations: [
@@ -13,9 +16,13 @@ import { UiTaskComponent } from './background-tasks/components/ui-task/ui-task.c
     UiTaskComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    BrowserModule,
     BrowserAnimationsModule,
+    FfmpegModule,
+    FileUploadModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatButtonModule,
     MatProgressBarModule,
     MatIconModule,

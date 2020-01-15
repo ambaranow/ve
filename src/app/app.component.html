@@ -1,8 +1,23 @@
-<div>
+<!-- <div>
   <mat-card>
     <h1>{{ title }}</h1>
     <div *ngFor="let task of tasks">
       <app-ui-task [task]="task"></app-ui-task>
     </div>
   </mat-card>
-</div>
+</div> -->
+
+<form [formGroup]="form">
+  <!-- Загрузка файла -->
+  <app-file-upload class="file-upload__ctrl"
+    formControlName="fileCtrl"
+    *ngIf="!fileUploaded"
+    [acceptType]="'video/*'"
+    (fileUploaded)="onFilePicked($event)"
+    [title]="'Drag file here'">
+  </app-file-upload>
+</form>
+
+<app-ffmpeg
+  *ngIf="fileUploaded"
+  [afterFilePicked]="afterFilePicked"></app-ffmpeg>

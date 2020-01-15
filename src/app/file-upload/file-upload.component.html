@@ -1,0 +1,9 @@
+<div class="file-picker"
+    ngxFilePicker
+    ngxFileDropzone
+    #filePicker="ngxFilePicker"
+    [accept]="acceptType"
+    (filePick)="onFilePicked($event)"
+    (fileDrop)="onFilePicked($event)">
+  <span>{{ title }}</span>
+</div>
