@@ -3,6 +3,7 @@
     ngxFileDropzone
     #filePicker="ngxFilePicker"
     [accept]="acceptType"
+    [readMode]="readModeType"
     (filePick)="onFilePicked($event)"
     (fileDrop)="onFilePicked($event)">
   <span>{{ title }}</span>

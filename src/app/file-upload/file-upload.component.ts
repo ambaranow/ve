@@ -28,6 +28,7 @@ export class FileUploadComponent implements ControlValueAccessor {
   @Input() title: string;
 
   @Input() acceptType: string;
+  @Input() readModeType: string;
 
   @Output() fileUploaded = new EventEmitter<ReadFile>();
 

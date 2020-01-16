@@ -29,9 +29,12 @@ addEventListener('message', ({ data }) => {
       printErr: print,
       files: message.files || [],
       arguments: message.arguments || [],
-      TOTAL_MEMORY: message.TOTAL_MEMORY || false
+      // TOTAL_MEMORY: message.TOTAL_MEMORY || false
+      // TOTAL_MEMORY: false,
+      ALLOW_MEMORY_GROWTH: true,
       // Can play around with this option - must be a power of 2
       // TOTAL_MEMORY: 268435456
+      TOTAL_MEMORY: 1073741824
     };
 
     postMessage({
